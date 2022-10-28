@@ -1,0 +1,2 @@
+# ocvProjekty
+projekty open CV
