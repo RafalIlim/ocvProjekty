@@ -6,12 +6,12 @@ cv2.imshow('original_img', img)
 
 # konwersja do skali szarości
 
-grey = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2GRAY)
-cv2.imshow('grey', grey)
+gray = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2GRAY)
+cv2.imshow('gray', gray)
 
 # wydobycie maski
 
-thresh = cv2.threshold(src=grey, thresh=250, maxval=255, type=cv2.THRESH_BINARY)[1]
+thresh = cv2.threshold(src=gray, thresh=250, maxval=255, type=cv2.THRESH_BINARY)[1]
 cv2.imshow('thresh', thresh)
 
 # detekcja konturów

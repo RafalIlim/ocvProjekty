@@ -12,10 +12,10 @@ img = cv2.copyMakeBorder(
     borderType=cv2.BORDER_CONSTANT,
     value=(255, 255, 255)
 )
-grey = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2GRAY)
-#cv2.imshow('grey', grey)
+gray = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2GRAY)
+#cv2.imshow('gray', gray)
 
-thresh = cv2.threshold(src=grey, thresh=250, maxval=255, type=cv2.THRESH_BINARY)[1]
+thresh = cv2.threshold(src=gray, thresh=250, maxval=255, type=cv2.THRESH_BINARY)[1]
 cv2.imshow('thresh', thresh)
 
 contours = cv2.findContours(image=thresh, mode=cv2.RETR_LIST, method=cv2.CHAIN_APPROX_SIMPLE)[0]

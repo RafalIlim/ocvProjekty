@@ -17,11 +17,11 @@ roi = img[:rows, :cols]
 #cv2.imshow('roi', roi)
 #cv2.waitKey(0)
 
-grey = cv2.cvtColor(src=logo, code=cv2.COLOR_BGR2GRAY)
-#cv2.imshow('grey', grey)
+gray = cv2.cvtColor(src=logo, code=cv2.COLOR_BGR2GRAY)
+#cv2.imshow('gray', gray)
 #cv2.waitKey(0)
 
-mask = cv2.threshold(src=grey, thresh=220, maxval=255, type=cv2.THRESH_BINARY)[1]
+mask = cv2.threshold(src=gray, thresh=220, maxval=255, type=cv2.THRESH_BINARY)[1]
 #cv2.imshow('mask', mask)
 
 mask_inv = cv2.bitwise_not(mask)
