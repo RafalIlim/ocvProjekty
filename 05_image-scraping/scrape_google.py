@@ -13,18 +13,18 @@ from google_images_download import google_images_download
 
 response = google_images_download.googleimagesdownload()
 
-search_querries = ['horse', 'lion']
+search_querries = ['koń', 'kot']
 
 
 def download_images(query):
     arguments = {
         'keywords': query,
         'format': 'jpg',
-        'limit': 600,
+        'limit': 3,
         'print_urls': True,
         'size': 'medium',
         # 'aspect_ratio': 'square',
-        'chromedriver': r'C:\Users\krako\chrome-driver\chromedriver.exe'
+        'chromedriver': r'c:\Users\Rafal\PycharmProjects\ocvProjekty\chrome_drv\chromedriver.exe'
     }
 
     try:
@@ -33,10 +33,10 @@ def download_images(query):
         arguments = {
             'keywords': query,
             'format': 'jpg',
-            'limit': 600,
+            'limit': 3,
             'print_urls': True,
             'size': 'medium',
-            'chromedriver': r'C:\Users\krako\chrome-driver\chromedriver.exe'
+            'chromedriver': r'c:\Users\Rafal\PycharmProjects\ocvProjekty\chrome_drv\chromedriver.exe'
         }
         try:
             response.download(arguments)
